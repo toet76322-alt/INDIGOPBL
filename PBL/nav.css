@@ -1,0 +1,113 @@
+nav {
+    background-color: darkcyan;
+    height:60px;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+}
+nav ul li {
+    display:inline-block;
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 22px;
+    margin:0 7px;   
+    color:white;
+}
+/* logo */
+nav .logo {
+    float:left;
+    margin:0 30px;
+}
+nav .logo img {
+    width:45px;
+    height:50px;
+    padding-top: 10px;
+}
+/* check btn */
+nav #check {
+    display:none;
+}
+nav .checkbtn {
+    float:right;
+    font-size:40px;
+    color:white;
+    margin-right:30px;
+    line-height: 60px;
+    display:none;
+}
+/* right side */
+.right_nav {
+    display:inline-block;
+    position:absolute;
+    left:auto;
+    right:30px;
+}
+
+/* dropdown menu */
+.bi-caret-down-fill {
+    font-size: 12px;
+}
+.dropdown {
+    position:relative;
+}
+.dropdown-menu {
+    position:absolute;
+    min-width:120px;
+    background-color:rgb(49, 126, 126) ;
+    display:none;
+    
+}
+.dropdown-menu a {
+    font-size: 16px;
+    display:block;
+    line-height: 40px;
+    padding:8px;
+    margin:0;
+}
+.dropdown:hover .dropdown-menu {
+  display:block;  
+}
+.dropdown-menu a:hover {
+    background-color:rgb(86, 214, 214) ;
+}
+
+/* active nav item */
+.active {
+    background-color: darkgray;
+    padding:5px 10px;
+    border-radius: 7px;
+}
+
+/* for small devices */
+@media screen and (max-width:992px) {
+    .right_nav {
+        position:relative;        
+        left:0;right:0;
+        padding:0;
+    }
+   
+    nav .checkbtn {
+        display:block;        
+    }
+    nav ul li {
+        display:block;
+        margin:30px 0;
+    }
+    nav > ul {
+        background-color: rgb(4, 44, 44);
+        text-align: center;
+        padding:30px 0;
+        width:100%;
+        position:fixed;
+        top:30px;
+        left:-100%;
+    }
+    .dropdown-menu {
+        left:55%;
+    }
+    #check:checked ~ ul {
+        left:0;
+    }
+}
